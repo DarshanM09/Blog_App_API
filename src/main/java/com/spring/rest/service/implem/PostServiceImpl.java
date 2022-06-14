@@ -156,6 +156,13 @@ public class PostServiceImpl implements PostService {
 		return collect;
 	}
 
+	
+	
+
+	
+	
+	
+	
 	public Post dtoTopost(PostDto postDto) {
 		Post posts = modelMapper.map(postDto, Post.class);
 

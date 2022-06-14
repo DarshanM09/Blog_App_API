@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.ser.std.StdKeySerializers.Default;
+import com.spring.rest.Config.AppContstant;
 import com.spring.rest.entity.Post;
 import com.spring.rest.payloads.PostDto;
 import com.spring.rest.payloads.PostResponse;
@@ -87,10 +88,10 @@ public class PostController {
 	
 	@GetMapping("/posts")
 	public ResponseEntity<PostResponse> getallPost(
-			@RequestParam(value="pageNumber", defaultValue="0" ,required=false)Integer pageNumber, 
-			@RequestParam(value="pageSize", defaultValue="5" ,required=false)Integer pageSize,
-			@RequestParam(value="sortBy", defaultValue="postId" ,required=false)String sortBy,
-			@RequestParam(value="sortDir", defaultValue="Asc" ,required=false)String sortDir
+			@RequestParam(value="pageNumber", defaultValue=AppContstant.PAGE_NUMBER ,required=false)Integer pageNumber, 
+			@RequestParam(value="pageSize", defaultValue=AppContstant.PAGE_SIZE ,required=false)Integer pageSize,
+			@RequestParam(value="sortBy", defaultValue=AppContstant.SORT_BY ,required=false)String sortBy,
+			@RequestParam(value="sortDir", defaultValue=AppContstant.SORT_DIR ,required=false)String sortDir
 			){
 		
 		
@@ -108,9 +109,6 @@ public class PostController {
 		return new ResponseEntity<PostDto>(postByid,HttpStatus.OK);
 		
 	}
-	
-	
-	
 	
 	
 	

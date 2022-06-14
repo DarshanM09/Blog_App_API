@@ -32,8 +32,7 @@ public interface PostService {
 	
 	List<PostDto> getPostByUser(Integer userId);
 	
-//	
-//	Post dtoTopost(PostDto postDto);
-//	
-//	PostDto postTodto(Post post);
+
+
+
 }
