@@ -31,6 +31,6 @@ public class BlogAppApiApplication implements CommandLineRunner{
 		
 		System.out.println(this.passwordEncoder.encode("abc"));
 
-		
+		System.out.println("==================================================");
 	}
 }
